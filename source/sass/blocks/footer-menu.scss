@@ -1,0 +1,107 @@
+.footer-menu {
+    @include dflex(nowrap, row, space-between, flex-end);
+    @include list-reset;
+    gap: 10px;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    height: 60px;
+    padding: 10px;
+}
+
+.footer-menu__item {
+    position: relative;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.footer-menu__link {
+    @include dflex(nowrap, column, flex-end, center);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: $neutral-color-medium;
+    font-size: $small-fz;
+    line-height: $small-lh;
+
+    &::before {
+        @include abs-center-x;
+        top: auto;
+        bottom: 13px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: transparent;
+        z-index: -1;
+    }
+
+    &:after {
+        @include abs-center-x;
+        top: auto;
+        bottom: 16px;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 24px 24px;
+    }
+
+    &--home {
+        &:after {
+            background-image: url("../img/icon-footer-menu-home.svg");
+        }
+    }
+
+    &--catalog {
+        &:after {
+            background-image: url("../img/icon-footer-menu-catalog.svg");
+        }
+    }
+
+    &--fav {
+        &:after {
+            background-image: url("../img/icon-footer-menu-fav.svg");
+        }
+    }
+
+    &--personal {
+        &:after {
+            background-image: url("../img/icon-footer-menu-personal.svg");
+        }
+    }
+
+    &--active {
+        color: #000;
+
+        &::before {
+            background-color: $accent-color;
+        }
+
+        &.footer-menu__link--home {
+            &:after {
+                background-image: url("../img/icon-footer-menu-home-active.svg");
+            }  
+        }
+
+        &.footer-menu__link--catalog {
+            &:after {
+                background-image: url("../img/icon-footer-menu-catalog-active.svg");
+            }  
+        }
+
+        &.footer-menu__link--fav {
+            &:after {
+                background-image: url("../img/icon-footer-menu-fav-active.svg");
+            }  
+        }
+
+        &.footer-menu__link--personal {
+            &:after {
+                background-image: url("../img/icon-footer-menu-personal-active.svg");
+            }  
+        }
+    }
+}

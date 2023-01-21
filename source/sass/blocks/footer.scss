@@ -1,0 +1,10 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: $footer-box-shadow;
+    z-index: 100000;
+    transform: translateX(-50%);
+}

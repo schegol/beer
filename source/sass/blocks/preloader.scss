@@ -1,0 +1,11 @@
+.preloader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg-color;
+    z-index: 1000000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/logo-preloader.svg");
+    background-size: 253px auto;
+}

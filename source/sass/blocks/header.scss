@@ -1,0 +1,30 @@
+.header {
+    height: 85px;
+    padding-top: 26px;
+}
+
+.header .site-container {
+    height: 100%;
+}
+
+.header__wrapper {
+    @include dflex(nowrap, row, space-between, center);
+    position: relative;
+    height: 100%;
+}
+
+.header__personal-link {
+    position: relative;
+    width: 97px;
+    padding-left: 27px;
+    color: rgba(#000,.5);
+    font-size: $small-fz;
+    line-height: $small-lh;
+
+    &::before {
+        @include abs-center-y;
+        @include background("../img/icon-personal-link.svg");
+        width: 21px;
+        height: 21px;
+    }
+}

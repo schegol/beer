@@ -1,27 +1,30 @@
-$accent-color-dark: #1E1765;
-$accent-color-medium: #615A9F;
-$accent-color-light: #DEDCEC;
-$link-color: #252525;
-$text-color: #5B5B5B;
-$secondary-text-color: #848484;
-$alert-color: #F05B5B;
-$contour-color: #EEEEEE;
-$bg-color: #F4F3F8;
-$footer-hover-color: #BD9B60;
-$telegram-color: #29A9EA;
-$whatsapp-color: #45C655;
-$ghost-heading-color: rgba(30,23,101,.03);
+$bg-color: #F5F6FF;
+$modal-bg-color: #050931;
+$accent-color: #FFC700;
+$link-color: #0059C1;
+$accent-transparent-color: rgba(255, 199, 0, 0.5);
 
-$gradient: linear-gradient(to right, #C69848 0%, #F9D597 25%, #C69848 50%, #F9D597 75%, #C69848 100%);
-$gradient-vertical: linear-gradient(to bottom, #C69848 0%, #F9D597 25%, #C69848 50%, #F9D597 75%, #C69848 100%);
-$gradient-simple: linear-gradient(to right, #C69848 0%, #F9D597 50%, #C69848 100%);
+$neutral-color-medium: #9A9CAD;
+$neutral-color-dark: #898989;
+$neutral-color-light: #E0E2F8;
 
-$box-shadow: 0 4px 20px rgba(44,48,123,.08);
-$box-shadow-hover: 0 10px 30px rgba(44,48,123,.15);
+$success-bg-color: #ECFCF0;
+$success-border-color: #9BDDAB;
 
-$transition-delay: .05s;
+$info-bg-color: #ECEEFC;
+$info-border-color: #BEC4FA;
 
-$tablet-width: 768px;
-$desktop-width: 1024px;
-$big-desktop-width: 1500px;
-$full-hd-width: 1920px;
+$sale-heading-color: #C21010;
+$sale-bg-color: #EDB8B8;
+
+$new-heading-color: #45B600;
+$new-bg-color: #C8E9B3;
+
+$label-fz: 14px;
+$label-lh: 20px;
+$small-fz: 12px;
+$small-lh: 14px;
+
+$border-radius: 10px;
+$footer-box-shadow: 0 -2px 8px rgba(0,0,0,.05);
+$max-width: 768px;
