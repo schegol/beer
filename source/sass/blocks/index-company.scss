@@ -1,0 +1,19 @@
+.index-company {
+    padding: 20px 0 80px;
+    background-color: #fff;
+}
+
+.index-company__text {
+    margin-bottom: 12px;
+}
+
+.index-company__text p {
+    color: $neutral-color-dark;
+    font-size: $label-fz;
+    line-height: $label-lh;
+}
+
+.index-company__img {
+    border-radius: $border-radius;
+    width: 100%;
+}

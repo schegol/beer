@@ -93,8 +93,8 @@ h3 {
 
 p {
     margin: 0 0 20px;
-}
 
-p:last-child {
-    margin-bottom: 0;
+    :last-child {
+        margin-bottom: 0;
+    }
 }

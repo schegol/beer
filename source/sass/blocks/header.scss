@@ -1,5 +1,5 @@
 .header {
-    height: 85px;
+    min-height: 85px;
     padding-top: 26px;
 }
 
@@ -13,9 +13,19 @@
     height: 100%;
 }
 
+.header__title {
+    @include center;
+    position: absolute;
+    margin: 0;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
 .header__personal-link {
     position: relative;
     width: 97px;
+    margin-left: auto;
     padding-left: 27px;
     color: rgba(#000,.5);
     font-size: $small-fz;

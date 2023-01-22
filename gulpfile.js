@@ -102,7 +102,7 @@ gulp.task("clean", function() {
 gulp.task("build", gulp.series(
 	"clean",
 	"copy",
-//	"css",
+	"css",
 //	"vendorCss",
 	"js",
 	"images",
