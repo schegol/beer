@@ -1,3 +1,12 @@
+.slider__item {
+    margin: 0 4px;
+}
+
+.slider .slick-list {
+    width: calc(100% + 8px);
+    margin: 0 -4px;
+}
+
 .slider__dots-list {
     @include list-reset;
     @include dflex(nowrap, row, center, center);

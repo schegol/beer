@@ -1,0 +1,302 @@
+.product {
+    @include dflex(nowrap, row, space-between, stretch);
+    position: relative;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid $neutral-color-light;
+    border-radius: $border-radius;
+}
+
+.product__corner-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 29px;
+    height: 29px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &--fav {
+        @include background("../img/icon-product-fav.svg");
+    }
+
+    &--fav-active {
+        @include background("../img/icon-product-fav-active.svg");
+    }
+
+    &--remove {
+        @include background("../img/icon-product-remove.svg");
+    }
+}
+
+.product__left {
+    @include dflex(nowrap, column, flex-start, center);
+    flex-basis: 18.18%;
+    flex-shrink: 0;
+}
+
+.product__img-block {
+    flex-shrink: 0;
+    width: 100%;
+    margin-bottom: 4px;
+    border-radius: $border-radius-small;
+    overflow: hidden;
+}
+
+.product__img {
+    @include object-fit;
+}
+
+.product__left-bottom {
+    @include dflex(nowrap, column, space-between, center);
+    flex-grow: 1;
+}
+
+.product__rating {
+    position: relative;
+    margin-bottom: 3px;
+    padding-left: 19px;
+    font-size: $label-fz;
+    line-height: $label-lh;
+
+    &::before {
+        @include abs-center-y;
+        @include background("../img/icon-product-rating.svg");
+        width: 14px;
+        height: 14px;
+    }
+}
+
+.product__tags {
+    @include dflex(wrap, row, center, flex-start);
+    position: relative;
+    left: 2px;
+    width: calc(100% + 2px);
+    margin-bottom: -2px;
+}
+
+.product__tag {
+    @include dflex(nowrap, row, center, center);
+    height: 16px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    padding: 0 4px;
+    white-space: nowrap;
+    font-size: 10px;
+    line-height: 14px;
+    border-radius: 2px;
+
+    &--hit {
+        background-color: $accent-color;
+    }
+
+    &--new {
+        color: #fff;
+        background-color: $new-heading-color;
+    }
+
+    &--sale {
+        color: #fff;
+        background-color: $sale-heading-color;
+    }
+}
+
+.product__prices {
+    @include dflex(nowrap, column, flex-start, center);
+}
+
+.product__price {
+    text-align: center;
+    font-weight: 700;
+    font-size: $label-fz;
+    line-height: $label-lh;
+
+    &--old {
+        margin-bottom: -2px;
+        color: $neutral-color-medium;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        text-decoration: line-through;
+    }
+}
+
+.product__right {
+    @include dflex(nowrap, column, flex-start, stretch);
+    flex-basis: calc(81.82% - 12px);
+    min-width: 0;
+    margin-left: 12px;
+}
+
+.product__name {
+    display: block;
+    min-height: 36px;
+    margin-bottom: 2px;
+    padding-right: 33px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.product__right-bottom {
+    @include dflex(nowrap, column, space-between, stretch);
+    width: 100%;
+    flex-grow: 1;
+}
+
+.product__additional-props {
+    @include dflex(nowrap, column, flex-start, flex-start);
+}
+
+.product__additional-prop {
+    color: $neutral-color-dark;
+    font-size: $label-fz;
+    line-height: $label-lh;
+
+    &:not(:last-child) {
+        margin-bottom: 2px;
+    }
+}
+
+.product__props {
+    @include dflex(nowrap, row, space-between, center);
+}
+
+.product__package-prop {
+    color: $neutral-color-dark;
+    font-size: $label-fz;
+    line-height: $label-lh;
+}
+
+.product__number-props {
+    @include dflex(nowrap, row, space-between, center);
+}
+
+.product__number-prop {
+    @include dflex(nowrap, column, flex-start, center);
+    min-width: 35px;
+    margin: 0;
+
+    &:not(:last-child) {
+        margin-right: 2px;
+    }
+}
+
+.product__number-prop-value {
+    text-align: center;
+    font-size: $label-fz;
+    line-height: $label-lh;
+}
+
+.product__number-prop-name {
+    margin-top: -5px;
+    text-align: center;
+    font-size: 8px;
+    line-height: 14px;
+    color: $neutral-color-dark;
+}
+
+.product__brand {
+    @include dflex(nowrap, row, flex-start, flex-end);
+    margin-bottom: 8px;
+}
+
+.product__brand-img-block {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+}
+
+.product__brand-img {
+    @include object-fit;
+}
+
+.product__brand-name {
+    font-size: $label-fz;
+    line-height: $label-lh;
+}
+
+.product__controls {
+    @include dflex(nowrap, row, space-between, center);
+    margin-top: auto;
+}
+
+.product__controls-btns {
+    @include dflex(nowrap, row, space-between, center);
+    @include transition;
+    flex-basis: calc(50% - 6px);
+    margin-right: 12px;
+    background-color: #fff;
+    border: 1px solid $neutral-color-light;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.product__controls--active .product__controls-btns {
+    background-color: $accent-color;
+    border-color: $accent-color;
+}
+
+.product__controls-btn {
+    flex-shrink: 0;
+    width: 44px;
+    height: 48px;
+    padding: 0;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 14px auto;
+    border: none;
+    cursor: pointer;
+
+    &--minus {
+        background-image: url("../img/icon-product-btn-minus.svg");
+    }
+
+    &--plus {
+        background-image: url("../img/icon-product-btn-plus.svg");
+    }
+}
+
+.product__controls-btn--minus.product__controls-btn--disabled {
+    background-image: url("../img/icon-product-btn-minus-disabled.svg");
+}
+
+.product__controls-btn--plus.product__controls-btn--disabled {
+    background-image: url("../img/icon-product-btn-plus-disabled.svg");
+}
+
+.product__controls-counter {
+    -moz-appearance: textfield;
+    flex-grow: 1;
+    flex-basis: auto;
+    display: block;
+    min-width: 0;
+    padding: 0;
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    background-color: transparent;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.product__controls-total {
+    display: none;
+    flex-basis: calc(50% - 6px);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+}
+
+.product__controls--active .product__controls-total {
+    display: block;
+}

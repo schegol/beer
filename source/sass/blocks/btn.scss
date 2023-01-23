@@ -1,0 +1,19 @@
+.btn {
+    @include dflex(nowrap, row, center, center);
+    min-height: 54px;
+    padding: 0 15px;
+    border-radius: 30px;
+    font-weight: 500;
+    color: #000;
+    background-color: $accent-color;
+    text-align: center;
+
+    &--non-target {
+        font-weight: 400;
+        background-color: #fff;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
