@@ -2,8 +2,10 @@ $bg-color: #F5F6FF;
 $modal-bg-color: #050931;
 $accent-color: #FFC700;
 $link-color: #0059C1;
-$accent-transparent-color: rgba(255, 199, 0, 0.5);
+$accent-transparent-color: rgba(255,199,0,.5);
 $block-link-count-color: rgba(5,9,49,.7);
+$total-price-color: #160D00;
+$total-discount-color: rgba(22,13,0,.7);;
 
 $neutral-color-medium: #9A9CAD;
 $neutral-color-dark: #898989;
@@ -26,6 +28,7 @@ $label-lh: 20px;
 $small-fz: 12px;
 $small-lh: 14px;
 
+$border: 1px solid $neutral-color-light;
 $border-radius: 10px;
 $border-radius-small: 4px;
 $footer-box-shadow: 0 -2px 8px rgba(0,0,0,.05);

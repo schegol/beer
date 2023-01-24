@@ -3,7 +3,7 @@
     position: relative;
     padding: 12px;
     background: #fff;
-    border: 1px solid $neutral-color-light;
+    border: $border;
     border-radius: $border-radius;
 }
 
@@ -228,7 +228,7 @@
     flex-basis: calc(50% - 6px);
     margin-right: 12px;
     background-color: #fff;
-    border: 1px solid $neutral-color-light;
+    border: $border;
     border-radius: 30px;
     overflow: hidden;
 }

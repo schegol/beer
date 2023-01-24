@@ -1,0 +1,64 @@
+.cart {
+    padding-bottom: 20px;
+}
+
+.cart__product {
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.cart__total {
+    margin-bottom: 8px;
+    padding: 11px 15px;
+    background-color: #fff;
+    border: $border;
+    border-radius: $border-radius;
+}
+
+.cart__total-row {
+    @include dflex(nowrap, row, space-between, center)
+
+    &:not(:last-of-type) {
+        margin-bottom: 2px;
+    }
+
+    &:last-of-type {
+        margin-bottom: 8px;
+    }
+}
+
+.cart__total-text {
+    color: $total-price-color;
+}
+
+.cart__total-prices {
+    @include dflex(nowrap, row, flex-end, center);
+    margin: 0;
+}
+
+.cart__total-price {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: $total-price-color;
+
+    &--old {
+        margin-right: 8px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration-line: line-through;
+        color: rgba(#000,.5);
+    }
+}
+
+.cart__total-products {
+    color: $total-discount-color;
+}
+
+.cart__total-discount {
+    font-size: $label-fz;
+    line-height: $label-lh;
+    color: $total-discount-color;
+}

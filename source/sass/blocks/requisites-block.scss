@@ -1,0 +1,25 @@
+.requisites-block {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: $border-radius;
+    border: $border;
+}
+
+.requisites-block__items {
+    @include dflex(nowrap, column, flex-start, flex-start);
+}
+
+.requisites-block__pair {
+    @include dflex(nowrap, column, flex-start, flex-start);
+    margin: 0;
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.requisites-block__pair-name {
+    color: rgba(#000,.3);
+    font-size: $label-fz;
+    line-height: $label-lh;
+}

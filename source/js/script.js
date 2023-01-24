@@ -21,13 +21,19 @@ $(function () {
     }
 
     //избранное (УДАЛИТЬ ПОСЛЕ ПЕРЕНОСА):
-    let productFavBtns = $('.product__corner-btn--fav');
+    let productBtns = $('.product__corner-btn');
     
-    productFavBtns.each(function() {
+    productBtns.each(function() {
         let btn = $(this);
 
         btn.on('click', function() {
-            btn.toggleClass('product__corner-btn--fav-active');
+            if (btn.hasClass('product__corner-btn--fav')) {
+                btn.toggleClass('product__corner-btn--fav-active');
+            } else if (btn.hasClass('product__corner-btn--remove')) {
+                let product = btn.closest('.product');
+
+                product.remove();
+            }
         });
     });
 
@@ -60,6 +66,21 @@ $(function () {
                     block.removeClass('product__controls--active');
                 }
             }
+        });
+    });
+
+    //открытие списков товаров:
+    let productsListHeads = $('.products-list__block-head');
+
+    productsListHeads.each(function() {
+        let head = $(this),
+            products = head.next('.products-list__products');
+
+        head.on('click', function(e) {
+            e.preventDefault;
+
+            head.toggleClass('products-list__block-head--open');
+            products.slideToggle(300);
         });
     });
 });
