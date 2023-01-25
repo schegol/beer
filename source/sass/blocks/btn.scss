@@ -7,10 +7,12 @@
     color: #000;
     background-color: $accent-color;
     text-align: center;
+    border: none;
 
     &--non-target {
         font-weight: 400;
         background-color: #fff;
+        border: $border;
     }
 
     &:focus {

@@ -29,6 +29,14 @@
         line-height: 28px;
         text-transform: none;
     }
+
+    &--sale {
+        color: $sale-heading-color;
+    }
+
+    &--new {
+        color: $new-heading-color;
+    }
 }
 
 .header__personal-link {

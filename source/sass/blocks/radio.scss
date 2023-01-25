@@ -1,0 +1,36 @@
+.radio {
+    min-height: 30px;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+.radio__label {
+    @include dflex(nowrap, row, flex-start, center);
+    position: relative;
+    padding-left: 38px;
+    color: #fff;
+
+    &::before {
+        @include abs-center-y;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    &::after {
+        @include abs-center-y;
+        display: none;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 9px solid $accent-color;
+    }
+}
+
+.radio__input:checked + .radio__label::after {
+    display: block;
+}

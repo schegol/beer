@@ -1,0 +1,53 @@
+.catalog-filters {
+    @include dflex(nowrap, column, flex-start, stretch); 
+    margin-bottom: 16px;
+}
+
+.catalog-filters__inputs {
+    @include dflex(nowrap, row, flex-start, center); 
+}
+
+.catalog-filters__search-form {
+    flex-grow: 1;
+}
+
+.catalog-filters__search {
+    width: 100%;
+}
+
+.catalog-filters__sort-btn {
+    width: 54px;
+    height: 54px;
+    margin-left: 6px;
+    background-color: #fff;
+    border: $border;
+    border-radius: 50%;
+    background-image: url("../img/icon-catalog-sort.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 21px;
+}
+
+.catalog-filters__results {
+    margin-top: 0;
+}
+
+.catalog-filters__results {
+    @include dflex(nowrap, row, space-between, center);
+    margin-top: 16px;
+}
+
+.catalog-filters__results-count {
+    margin-right: 8px;
+}
+
+.catalog-filters__reset-btn {
+    padding-right: 22px;
+    color: $neutral-color-dark;
+    background-color: transparent;
+    background-position: right calc(50% + 1px);
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    background-image: url("../img/icon-filter-reset-cross.svg");
+    border: none;
+}

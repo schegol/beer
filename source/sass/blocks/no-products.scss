@@ -1,0 +1,15 @@
+.no-products {
+    @include dflex(nowrap, column, flex-start, center);
+}
+
+.no-products__heading {
+    margin-bottom: 16px;
+}
+
+.no-products__img-block {
+    width: 79.72%;
+}
+
+.no-products__img {
+    @include object-fit;
+}

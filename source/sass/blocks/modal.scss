@@ -1,0 +1,50 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: rgba(#000,.5);
+    z-index: 10000;
+
+    &--open {
+        display: block;
+    }
+}
+
+.modal__body {
+    @include center;
+    position: absolute;
+    display: none;
+    width: calc(100% - 30px);
+    max-width: $max-width;
+    height: auto;
+    padding: 50px 20px 40px;
+    background-color: $modal-bg-color;
+    border-radius: $border-radius;
+    z-index: 10001;
+
+    &--open {
+        @include dflex(nowrap, column, center, stretch);
+    }
+}
+
+.modal__close-btn {
+    @include background("../img/icon-modal-close-cross.svg");
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.modal__heading {
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+}
