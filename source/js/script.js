@@ -1,3 +1,15 @@
+//форматирование размера загружаемого файла:
+const formatFileSize = function(bytes) {
+    let i = -1,
+        byteUnits = [' кб', ' Мб', ' Гб', ' Тб'];
+    do {
+        bytes /= 1024;
+        i++;
+    } while (bytes > 1024);
+
+    return Math.max(bytes, 0.1).toFixed(1) + byteUnits[i];
+}
+
 //выпадание селекта в нужном направлении:
 const modifySelect2 = function() {
     var Defaults = $.fn.select2.amd.require('select2/defaults');
@@ -246,7 +258,7 @@ $(function () {
 
     //вызовы модалкок (УДАЛИТЬ ПОСЛЕ ПЕРЕНОСА):
     let sortModalCallBtn = $('.catalog-filters__sort-btn'),
-        closeModalBtns = $('.modal__close-btn'),
+        closeModalBtns = $('.modal__close-btn, .modal__ok-btn'),
         modalsOverlay = $('.modal'),
         modals = $('.modal__body');
 
@@ -291,6 +303,89 @@ $(function () {
             'mask': '+7 (999) 999-99-99',
             'clearIncomplete': true,
             'greedy': false,
+        });
+    }
+
+    //раскрытие групп полей:
+    let inputGroupToggles = $('.form__group-toggle');
+
+    if (inputGroupToggles.length) {
+        inputGroupToggles.each(function() {
+            let toggle = $(this),
+                inputsBlock = toggle.next('.form__group-minimized');
+    
+            toggle.on('click', function() {
+                toggle.toggleClass('form__group-toggle--open');
+                inputsBlock.slideToggle(300);
+            });
+        });
+    }
+
+    //загрузка файлов (ПОПРАВИТЬ ПОСЛЕ ПЕРЕНОСА):
+    let fileInputs = $('.form__input--file');
+
+    if (fileInputs.length) {
+        fileInputs.each(function() {
+            let fileInput = $(this),
+                visualBtn = fileInput.parent().children('.form__input-label--file');
+
+            fileInput.on('change', function(e) {
+                e.preventDefault();
+
+                let file = fileInput[0].files[0],
+                    fileName = file.name,
+                    //fileSize = file.size,
+                    //fileSizeFormatted = formatFileSize(fileSize),
+                    fileBlock;
+
+                fileBlock = '<a class="form__uploaded-file" href="#">\n'+fileName+'</a>';
+
+                visualBtn.before(fileBlock);
+            });
+        });
+    }
+
+    body.on('click', '.form__uploaded-file', function(e) {
+        e.preventDefault();
+
+        $(this).remove();
+    });
+
+    //имитация отправки формы на модерацию (УДАЛИТЬ ПОСЛЕ ПЕРЕНОСА):
+    let cabinetFormSubmitBtn = $('#cabinetFormSaveBtn');
+
+    if (cabinetFormSubmitBtn.length) {
+        cabinetFormSubmitBtn.on('click', function(e) {
+            e.preventDefault();
+
+            let form = $(this).closest('form'),
+                inputs = form.find('input');
+
+            form.addClass('form--on-moderation');
+            inputs.prop('disabled', 'disabled');
+            openModal('modalCabinetFormModeration');
+        });
+    }
+
+    //модалка об успешной смене пароля в ЛК (УДАЛИТЬ ПОСЛЕ ПЕРЕНОСА):
+    let cabinetPassChangeBtn = $('#cabinetPassChangeBtn');
+
+    if (cabinetPassChangeBtn.length) {
+        cabinetPassChangeBtn.on('click', function(e) {
+            e.preventDefault();
+
+            openModal('modalCabinetPasswordChanged');
+        });
+    }
+
+    //модалка о выходе из ЛК (УДАЛИТЬ ПОСЛЕ ПЕРЕНОСА?):
+    let cabinetExitBtn = $('#cabinetExit');
+
+    if (cabinetExitBtn.length) {
+        cabinetExitBtn.on('click', function(e) {
+            e.preventDefault();
+
+            openModal('modalCabinetExit');
         });
     }
 });

@@ -1,0 +1,28 @@
+.cabinet__links {
+    @include dflex(nowrap, column, flex-start, stretch);
+    margin-bottom: 16px;
+}
+
+.cabinet__link {
+    @include dflex(nowrap, row, flex-start, center);
+    position: relative;
+    min-height: 54px;
+    padding: 15px 39px 15px 15px;
+    color: #000;
+    background-color: #fff;
+    border: $border;
+    border-radius: 8px;
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    &::after {
+        @include abs-center-y;
+        @include background("../img/icon-cabinet-link-arrow.svg");
+        right: 15px;
+        left: auto;
+        width: 9px;
+        height: 14px;
+    }
+}

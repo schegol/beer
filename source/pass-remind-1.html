@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Восстановление пароля</title>
+</head>
+<body>
+	<header class="header">
+        <div class="site-container">
+            <div class="header__wrapper">
+                <a class="header__return-btn" href="#"></a>
+
+                <h1 class="header__title header__title--small">Восстановление пароля</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="site-container">
+                <div class="info-block info-block--success">
+                    <p>На указанную почту будет выслан код для сброса пароля</p>
+                </div>
+
+                <div class="form-wrapper">
+                    <form class="form" action="#" method="post">
+                        <div class="form__input-block">
+                            <label class="form__input-label" for="formInput1">
+                                E-mail<span class="form__input-required"> *</span>
+                            </label>
+                            <div class="form__input-wrapper">
+                                <input class="form__input input" type="text" name="EMAIL" id="formInput1" value="" placeholder="Введите данные">
+                            </div>
+                        </div>
+
+                        <button class="form__submit-btn btn" type="submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <ul class="footer__menu footer-menu">
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--home">Главная</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--catalog" href="#">Каталог</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--fav" href="#">Избранное</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--personal footer-menu__link--active" href="#">Кабинет</a>
+            </li>
+        </ul>
+    </footer>
+
+    <div class="preloader preloader--loading"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

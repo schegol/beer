@@ -24,7 +24,7 @@
         border: 1px solid $alert-border-color;
     }
 
-    &:not(:last-child) {
+    &:not(:last-of-type) {
         margin-bottom: 15px;
     }
 }
@@ -36,6 +36,18 @@
 
     &:not(:last-child) {
         margin-bottom: 4px;
+    }
+}
+
+.info-block--alert h3 {
+    position: relative;
+    padding-left: 26px;
+
+    &::before {
+        @include abs-center-y;
+        @include background("../img/icon-info-block-alert.svg");
+        width: 20px;
+        height: 20px;
     }
 }
 

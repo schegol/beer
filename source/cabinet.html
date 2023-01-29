@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Личный кабинет</title>
+</head>
+<body>
+	<header class="header">
+        <div class="site-container">
+            <div class="header__wrapper">
+                <h1 class="header__title">Личный кабинет</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="site-container">
+                <div class="cabinet">
+                    <div class="cabinet__pairs pairs">
+                        <p class="pairs__pair">
+                            <span class="pairs__pair-name">Заведение</span>
+                            <span class="pairs__pair-value">Пивной островок</span>
+                        </p>
+
+                        <p class="pairs__pair">
+                            <span class="pairs__pair-name">ФИО контактного лица</span>
+                            <span class="pairs__pair-value">Константинов Константин Константинович</span>
+                        </p>
+
+                        <p class="pairs__pair">
+                            <span class="pairs__pair-name">Адрес доставки</span>
+                            <span class="pairs__pair-value">Санкт-Петербург, ул. Камышова, д.56</span>
+                        </p>
+                    </div>
+
+                    <div class="cabinet__links">
+                        <a class="cabinet__link" href="#">Мои заказы</a>
+                        <a class="cabinet__link" href="#">Запросы на возврат</a>
+                        <a class="cabinet__link" href="#">Изменить пароль</a>
+                        <a class="cabinet__link" href="#">Мои данные</a>
+                        <a class="cabinet__link" href="#">Информация о компании ABC</a>
+                    </div>
+
+                    <div class="cabinet__info info-block info-block--success info-block--centered">
+                        <h3>Помощь по любым вопросам</h3>
+                        <p>Обращайтесь к вашему менеджеру</p>
+                        <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+                        <span>Алексей</span>
+                    </div>
+
+                    <div class="cabinet__leave links-block">
+                        <a class="links-block__link btn btn--non-target" href="javascript:;" id="cabinetExit">Выйти из аккаунта</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <ul class="footer__menu footer-menu">
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--home">Главная</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--catalog" href="#">Каталог</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--fav" href="#">Избранное</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--personal footer-menu__link--active" href="#">Кабинет</a>
+            </li>
+        </ul>
+    </footer>
+
+    <div class="preloader preloader--loading"></div>
+
+    <div class="modal">
+        <div class="modal__body" id="modalCabinetExit">
+            <button class="modal__close-btn"></button>
+
+            <h3 class="modal__heading">Вы точно хотите выйти?</h3>
+
+            <div class="modal__btns">
+                <a class="modal__btn btn btn--non-target" href="#">Да</a>
+                <button class="modal__btn modal__ok-btn btn">Нет</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

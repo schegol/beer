@@ -1,0 +1,9 @@
+.links-block {
+    @include dflex(nowrap, column, flex-start, stretch);
+}
+
+.links-block__link {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}

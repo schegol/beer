@@ -1,0 +1,26 @@
+.auth-reg__logo {
+    width: 211px;
+    height: 56px;
+    margin: 0 auto 21px;
+}
+
+.auth-reg__text {
+    text-align: center;
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+.auth-reg__info-block {
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+.auth-reg__form {
+    margin-top: 40px;
+}
+
+.auth-reg__form .auth-reg__links {
+    margin-top: 32px;
+}

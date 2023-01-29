@@ -1,0 +1,23 @@
+.document {
+    @include dflex(nowrap, column, center, flex-start);
+    min-height: 60px;
+    padding-left: 72px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    background-image: url("../img/icon-document.svg");
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.document__name {
+    color: #000;
+}
+
+.document__size {
+    color: $neutral-color-dark;
+    font-size: $label-fz;
+    line-height: $label-lh;
+}

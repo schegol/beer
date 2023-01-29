@@ -48,3 +48,21 @@
     text-align: center;
     font-weight: 700;
 }
+
+.modal__btns {
+    @include dflex(nowrap, row, center, center);
+}
+
+.modal__btn {
+    padding-right: 50px;
+    padding-left: 50px;
+    
+    &:not(:first-child) {
+        margin-left: 10px;
+    }
+}
+
+.modal__ok-btn {
+    align-self: center;
+    padding: 0 50px;
+}

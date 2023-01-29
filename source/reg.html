@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Регистрация</title>
+</head>
+<body>
+	<header class="header">
+        <div class="site-container">
+            <div class="header__wrapper">
+                <a class="header__return-btn" href="#"></a>
+
+                <h1 class="header__title header__title--small">Регистрация</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="site-container">
+                <div class="info-block info-block--alert">
+                    <h3>Внимание</h3>
+                    <p>Мы работаем только с юридическими лицами и индивидуальными предпринимателями</p>
+                </div>
+
+                <form class="auth-reg__form form" action="#" method="post">
+                    <div class="form__input-group">
+                        <div class="form__input-block">
+                            <label class="form__input-label" for="formInput1">
+                                Наименование заведения<span class="form__input-required"> *</span>
+                            </label>
+                            <div class="form__input-wrapper">
+                                <input class="form__input input" type="text" name="BAR_NAME" id="formInput1" value="" placeholder="Введите название бара/иного заведения">
+                            </div>
+                        </div>
+
+                        <div class="form__input-block">
+                            <label class="form__input-label" for="formInput2">
+                                Фактический адрес<span class="form__input-required"> *</span>
+                            </label>
+                            <div class="form__input-wrapper">
+                                <textarea class="form__input form__input--textarea textarea textarea--small" name="ADDRESS" id="formInput2" value="" placeholder="Введите данные"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form__input-block">
+                            <label class="form__input-label" for="formInput3">
+                                Приём отгрузок<span class="form__input-required"> *</span>
+                            </label>
+                            <div class="form__input-wrapper">
+                                <select class="form__input form__input--half form__input--select" type="text" name="FROM" id="formInput3" data-placeholder="с --:--">
+                                    <option></option>
+                                    <option value="9">с 9:00</option>
+                                    <option value="10">с 10:00</option>
+                                    <option value="11">с 11:00</option>
+                                    <option value="12">с 12:00</option>
+                                </select>
+
+                                <select class="form__input form__input--half form__input--select" type="text" name="TO" id="formInput4" data-placeholder="до --:--">
+                                    <option></option>
+                                    <option value="17">до 17:00</option>
+                                    <option value="18">до 18:00</option>
+                                    <option value="19">до 19:00</option>
+                                    <option value="20">до 20:00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__input-group">
+                        <button class="form__add-btn form__add-btn--address btn btn--non-target" type="button">Добавить еще адрес</button>
+
+                        <div class="form__input-block">
+                            <label class="form__input-label" for="formInput5">
+                                ФИО контактного лица<span class="form__input-required"> *</span>
+                            </label>
+                            <div class="form__input-wrapper">
+                                <input class="form__input input" type="text" name="FIO" id="formInput5" value="" placeholder="Введите данные">
+                            </div>
+                        </div>
+
+                        <div class="form__input-block">
+                            <label class="form__input-label" for="formInput6">
+                                Контактный телефон<span class="form__input-required"> *</span>
+                            </label>
+                            <div class="form__input-wrapper">
+                                <input class="form__input input" type="text" name="PHONE" id="formInput6" value="" placeholder="+7 (___) ___-__-__">
+                            </div>
+                        </div>
+
+                        <div class="form__input-block">
+                            <label class="form__input-label" for="formInput7">
+                                E-mail<span class="form__input-required"> *</span>
+                            </label>
+                            <div class="form__input-wrapper">
+                                <input class="form__input input" type="text" name="EMAIL" id="formInput7" value="" placeholder="Введите данные">
+                            </div>
+                        </div>
+
+                        <div class="form__input-block">
+                            <label class="form__input-label" for="formInput8">
+                                Наименование юридического лица<span class="form__input-required"> *</span>
+                            </label>
+                            <div class="form__input-wrapper">
+                                <textarea class="form__input form__input--textarea textarea textarea--small" name="COMPANY_NAME" id="formInput8" value="" placeholder="Введите данные"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form__input-block">
+                            <label class="form__input-label" for="formInput9">
+                                Придумайте пароль<span class="form__input-required"> *</span>
+                            </label>
+                            <div class="form__input-wrapper">
+                                <input class="form__input input" type="password" name="PASSWORD" id="formInput9" value="" placeholder="Введите данные">
+                            </div>
+                        </div>
+
+                        <div class="form__input-block">
+                            <label class="form__input-label" for="formInput10">
+                                Повторите пароль<span class="form__input-required"> *</span>
+                            </label>
+                            <div class="form__input-wrapper">
+                                <input class="form__input input" type="password" name="PASSWORD_CONFIRM" id="formInput10" value="" placeholder="Введите данные">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__input-group">
+                        <button class="form__group-toggle btn btn--non-target" type="button">Данные юридического лица</button>
+
+                        <div class="form__group-minimized" style="display: none;">
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput11">
+                                    ИНН<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input input" type="text" name="INN" id="formInput11" value="" placeholder="Введите данные">
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput12">
+                                    Юридический адрес<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <textarea class="form__input form__input--textarea textarea textarea--small" name="YUR_ADDRESS" id="formInput12" value="" placeholder="Введите данные"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput13">
+                                    КПП<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input input" type="text" name="KPP" id="formInput13" value="" placeholder="Введите данные">
+                                </div>
+                            </div>
+                            
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput14">
+                                    ОГРН<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input input" type="text" name="OGRN" id="formInput14" value="" placeholder="Введите данные">
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput15">
+                                    ОКПО<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input input" type="text" name="OKPO" id="formInput15" value="" placeholder="Введите данные">
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput16">
+                                    ID ЕГАИС<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input input" type="text" name="ID_EGAIS" id="formInput16" value="" placeholder="Введите данные">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__input-group">
+                        <button class="form__group-toggle btn btn--non-target" type="button">Расчетный счет</button>
+
+                        <div class="form__group-minimized" style="display: none;">
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput17">
+                                    БИК<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input input" type="text" name="BIK" id="formInput17" value="" placeholder="Введите данные">
+                                </div>
+                            </div>
+                            
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput18">
+                                    Банк<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input input" type="text" name="BANK" id="formInput18" value="" placeholder="Введите данные">
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput19">
+                                    К/с<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input input" type="text" name="KS" id="formInput19" value="" placeholder="Введите данные">
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput20">
+                                    Р/с<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input input" type="text" name="RS" id="formInput20" value="" placeholder="Введите данные">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__input-group">
+                        <button class="form__group-toggle btn btn--non-target" type="button">Документы</button>
+
+                        <div class="form__group-minimized" style="display: none;">
+                            <div class="form__input-block">
+                                <input class="form__input form__input--file hidden-input" type="file" id="formInput21">
+                                <label class="form__input-label form__input-label--file form__add-btn form__add-btn--files btn btn--non-target" for="formInput21">
+                                    Загрузить файлы
+                                </label>
+                                <div class="form__files-text">
+                                    <p>
+                                        Загрузите файлы, которые у вас есть. Желательный список документов:
+                                    </p>
+                                    <ol>
+                                        <li>карта контрагента (с обязательным указанием юридического адреса и фактического),</li>
+                                        <li>свидетельство ОГРН (ОГРИП), </li>
+                                        <li>свидетельство о постановке на учёт в налоговый орган (ИНН),</li>
+                                        <li>документы подтверждающие полномочия на подписания договора (доверенность, приказ на директора).</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__input-block">
+                        <label class="form__input-label" for="formInput22">
+                            Комментарий
+                        </label>
+                        <div class="form__input-wrapper">
+                            <textarea class="form__input form__input--textarea textarea" name="COMMENT" id="formInput22" value="" placeholder="Напишите, что нам нужно знать"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form__input-block">
+                        <input class="form__input form__input--checkbox hidden-input" type="checkbox" id="formInput23">
+                        <label class="form__input-label form__input-label--checkbox" for="formInput23">
+                            Я согласен с Договором оферты
+                        </label>
+                    </div>
+
+                    <div class="form__input-block">
+                        <input class="form__input form__input--checkbox hidden-input" type="checkbox" id="formInput24">
+                        <label class="form__input-label form__input-label--checkbox" for="formInput24">
+                            Я согласен с <a href="#">Политикой конфиденциальности</a>
+                        </label>
+                    </div>
+
+                    <button class="form__submit-btn btn btn--alt" type="submit">Зарегистрироваться</button>
+                </form>                    
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <ul class="footer__menu footer-menu">
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--home">Главная</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--catalog" href="#">Каталог</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--fav" href="#">Избранное</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--personal footer-menu__link--active" href="#">Кабинет</a>
+            </li>
+        </ul>
+    </footer>
+
+    <div class="preloader preloader--loading"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

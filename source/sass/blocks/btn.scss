@@ -15,6 +15,12 @@
         border: $border;
     }
 
+    &--alt {
+        font-weight: 500;
+        color: #212121;
+        background-color: $neutral-color-light;
+    }
+
     &:focus {
         outline: none;
     }
