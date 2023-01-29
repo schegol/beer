@@ -1,0 +1,20 @@
+.order-success__info-top {
+    margin-bottom: 16px;
+}
+
+.order-success__links {
+    @include dflex(nowrap, column, flex-start, stretch);
+    margin-bottom: 16px;
+}
+
+.order-success__link {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+.order-success__info-bottom {
+    margin-top: 12px;
+}

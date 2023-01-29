@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Оформление заказа</title>
+</head>
+<body>
+	<header class="header">
+        <div class="site-container">
+            <div class="header__wrapper">
+                <a class="header__return-btn" href="#"></a>
+
+                <h1 class="header__title header__title--small">Оформление заказа</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="site-container">
+                <div class="order">
+                    <div class="order__total">
+                        <div class="order__total-sum-row">
+                            <span class="order__total-sum-heading">Сумма к оплате</span>
+                            <span class="order__total-sum-value">346&nbsp;746&nbsp;₽</span>
+                        </div>
+
+                        <div class="order__total-counter-row">
+                            <span class="order__total-counter">
+                                <span class="order__total-counter-value">5</span> наименований
+                            </span>
+                            <span class="order__total-discount">Скидка 100&nbsp;000&nbsp;₽</span>
+                        </div>
+                    </div>
+                    
+                    <div class="order__form-block">
+                        <form class="order__form-block form" action="#" method="post">
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput1">
+                                    ФИО контактного лица<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input input" type="text" name="NAME" id="formInput1" value="Константинов Константин Олегович" placeholder="Введите данные">
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput2">
+                                    Контактный телефон<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input input" type="text" name="PHONE" id="formInput2" value="+7 (900) 000-00-00" placeholder="+7 (___) ___-__-__">
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput3">
+                                    E-mail<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input input" type="text" name="EMAIL" id="formInput3" value="" placeholder="Введите данные">
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput4">
+                                    Адрес доставки<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <select class="form__input form__input--select" type="text" name="ADDRESS" id="formInput4">
+                                        <option value="-" selected>Новый</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput5">
+                                    Укажите адрес<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <input class="form__input input" type="text" name="NEW_ADDRESS" id="formInput5" value="" placeholder="Введите данные">
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput6">
+                                    Время приёма отгрузок<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <select class="form__input form__input--half form__input--select" type="text" name="FROM" id="formInput6">
+                                        <option value="9" selected>с 9:00</option>
+                                        <option value="10">с 10:00</option>
+                                        <option value="11">с 11:00</option>
+                                        <option value="12">с 12:00</option>
+                                    </select>
+
+                                    <select class="form__input form__input--half form__input--select" type="text" name="TO" id="formInput7">
+                                        <option value="17" selected>до 17:00</option>
+                                        <option value="18">до 18:00</option>
+                                        <option value="19">до 19:00</option>
+                                        <option value="20">до 20:00</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput8">
+                                    Дата доставки<span class="form__input-required"> *</span>
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <select class="form__input form__input--select" type="text" name="ADDRESS" id="formInput8">
+                                        <option value="09092022" selected>Завтра, 09.09.2022</option>
+                                        <option value="10092022">Послезавтра, 10.09.2022</option>
+                                        <option value="11092022">11.09.2022</option>
+                                        <option value="12092022">12.09.2022</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form__input-block">
+                                <label class="form__input-label" for="formInput9">
+                                    Комментарий
+                                </label>
+                                <div class="form__input-wrapper">
+                                    <textarea class="form__input form__input--textarea textarea" name="NEW_ADDRESS" id="formInput9" value="" placeholder="Напишите, что нам нужно знать"></textarea>
+                                </div>
+                            </div>
+
+                            <button class="form__submit-btn btn" type="submit">Подтвердить заказ</button>
+                        </form>
+                    </div>
+
+                    <div class="order__info">
+                        <div class="order__info-block info-block info-block--success info-block--centered">
+                            <h3>Помощь по любым вопросам</h3>
+                            <p>
+                                Обращайтесь к вашему менеджеру
+                            </p>
+                            <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+                            <span>Алексей</span>
+                        </div>
+
+                        <div class="order__info-block info-block info-block--info">
+                            <h3>Информация о доставке</h3>
+                            <p>
+                                Задача организации, в особенности же убеждённость некоторых оппонентов в значительной степени обусловливает важность прогресса профессионального сообщества. Идейные соображения высшего порядка, а также глубокий уровень погружения однозначно определяет каждого участника как способного принимать собственные решения касаемо анализа существующих паттернов поведения.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <ul class="footer__menu footer-menu">
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--home">Главная</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--catalog" href="#">Каталог</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--fav" href="#">Избранное</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--personal" href="#">Кабинет</a>
+            </li>
+        </ul>
+    </footer>
+
+    <div class="preloader preloader--loading"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

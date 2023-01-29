@@ -5,6 +5,10 @@
     background: #fff;
     border: $border;
     border-radius: $border-radius;
+
+    &--disabled {
+        opacity: .6;
+    }
 }
 
 .product__corner-btn {
@@ -238,6 +242,10 @@
     border-color: $accent-color;
 }
 
+.product.cart__product .product__controls-btns {
+    border-color: $accent-color;
+}
+
 .product__controls-btn {
     flex-shrink: 0;
     width: 44px;
@@ -299,4 +307,18 @@
 
 .product__controls--active .product__controls-total {
     display: block;
+}
+
+.product__alert-block {
+    margin-top: 8px;
+}
+
+.product__alert-block span {
+    font-size: $label-fz;
+    line-height: $label-lh;
+    color: $alert-color;
+
+    &:not(:last-child) {
+        margin-bottom: 4px;
+    }
 }

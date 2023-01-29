@@ -6,8 +6,10 @@
 @import "blocks/preloader.scss";
 @import "blocks/site-container.scss";
 @import "blocks/section.scss";
+@import "blocks/form.scss";
 @import "blocks/btn.scss";
 @import "blocks/input.scss";
+@import "blocks/textarea.scss";
 @import "blocks/modal.scss";
 @import "blocks/radio.scss";
 @import "blocks/header.scss";
@@ -16,6 +18,7 @@
 @import "blocks/product.scss";
 @import "blocks/footer-menu.scss";
 @import "blocks/slider.scss";
+@import "blocks/info-block.scss";
 @import "blocks/index-slider.scss";
 @import "blocks/index-company.scss";
 @import "blocks/block-links.scss";
@@ -29,3 +32,5 @@
 @import "blocks/catalog-filters.scss";
 @import "blocks/no-products.scss";
 @import "blocks/catalog-element.scss";
+@import "blocks/order.scss";
+@import "blocks/order-success.scss";

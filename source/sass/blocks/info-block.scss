@@ -1,0 +1,70 @@
+.info-block {
+    @include dflex(nowrap, column, flex-start, stretch);
+    padding: 12px 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: $border;
+
+    &--centered {
+        align-items: center;
+    }
+
+    &--success {
+        background-color: $success-bg-color;
+        border: 1px solid $success-border-color;
+    }
+
+    &--info {
+        background-color: $info-bg-color;
+        border: 1px solid $info-border-color;
+    }
+
+    &--alert {
+        background-color: $alert-bg-color;
+        border: 1px solid $alert-border-color;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+.info-block h3 {
+    font-weight: 700;
+    font-size: $label-fz;
+    line-height: $label-lh;
+
+    &:not(:last-child) {
+        margin-bottom: 4px;
+    }
+}
+
+.info-block p {
+    font-size: $label-fz;
+    line-height: $label-lh;
+    
+    &:not(:last-child) {
+        margin-bottom: 4px;
+    }
+}
+
+.info-block a {
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.info-block span {
+
+    &:not(:last-child) {
+        margin-bottom: 4px;
+    }
+}
+
+.info-block--centered h3,
+.info-block--centered p,
+.info-block--centered a,
+.info-block--centered span {
+    text-align: center;
+}

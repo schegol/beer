@@ -1,0 +1,100 @@
+.form {
+    @include dflex(nowrap, column, flex-start, stretch);
+}
+
+.form__input-block {
+    margin-bottom: 15px;
+}
+
+.form__input-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: $label-fz;
+    line-height: $label-lh;
+}
+
+.form__input-required {
+    color: $sale-heading-color;
+}
+
+.form__input-wrapper {
+    @include dflex(nowrap, row, space-between, center);
+}
+
+.form__input {
+    display: block;
+    flex-basis: 100%;
+    flex-grow: 1;
+
+    &--half {
+        flex-basis: calc(50% - 4px);
+    }
+}
+
+.form__input--half + .select2 {
+    flex-basis: calc(50% - 4px);
+}
+
+.form__input--select + .select2 .select2-selection__rendered {
+    @include dflex(nowrap, row, flex-start, center);
+    max-width: 100%;
+    height: 54px;
+    padding: 0 45px 0 20px;
+    color: #000;
+    background-color: #fff;
+    border: $border;
+    border-radius: 35px;
+}
+
+.form__input--select + .select2-container--open .select2-selection__rendered {
+    border-bottom: none;
+    border-radius: 27px 27px 0 0;
+}
+
+.form__input--select + .select2 .select2-selection {
+    max-width: 100%;
+    height: 54px;
+    border: none;
+    border-radius: 35px;
+}
+
+.form__input--select + .select2 .select2-selection__arrow {
+    @include background("../img/icon-select-arrow-closed.svg");
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 24px;
+    height: 21px;
+    transform: translateY(-50%);
+}
+
+.form__input--select + .select2-container--open .select2-selection__arrow{
+    background-image: url("../img/icon-select-arrow-open.svg");
+}
+
+.form__input--select + .select2 .select2-selection__arrow b {
+    border: none;
+}
+
+.select2-container--open .select2-dropdown--below {
+    border-right: $border;
+    border-bottom: $border;
+    border-left: $border;
+    border-radius: 0 0 35px 35px;
+}
+
+.select2-results__option {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.select2-results__option {
+    padding: 0 20px 15px;
+    background-color: transparent !important;
+}
+
+.form__submit-btn {
+    width: 100%;
+    margin-top: 5px;
+    font-weight: 500;
+}

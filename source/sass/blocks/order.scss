@@ -1,0 +1,46 @@
+.order__total {
+    @include dflex(nowrap, column, flex-start, stretch);
+    margin-bottom: 20px;
+    padding: 11px 15px;
+    border-radius: $border-radius;
+    background-color: $modal-bg-color;
+}
+
+.order__total-sum-row {
+    @include dflex(nowrap, row, space-between, center);
+    margin-bottom: 4px;
+}
+
+.order__total-sum-heading {
+    color: #fff;
+}
+
+.order__total-sum-value {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.order__total-counter-row {
+    @include dflex(nowrap, row, space-between, center);
+    opacity: .5;
+}
+
+.order__total-counter {
+    color: #fff;
+}
+
+.order__total-discount {
+    color: #fff;
+    font-size: $label-fz;
+    line-height: $label-lh;
+}
+
+.order__form-block {
+    padding-bottom: 20px;
+}
+
+.order__info {
+    padding: 20px 0;
+}
