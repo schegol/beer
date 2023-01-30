@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Запросить акт</title>
+</head>
+<body>
+	<header class="header">
+        <div class="site-container">
+            <div class="header__wrapper">
+                <a class="header__return-btn" href="#"></a>
+
+                <h1 class="header__title header__title--small">Запросить акт</h1>
+
+                <a class="header__personal-link" href="#">Пивной островок</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="site-container">
+                <form class="form" action="#" method="post">
+                    <div class="form__input-block">
+                        <label class="form__input-label" for="formInput3">
+                            E-mail<span class="form__input-required"> *</span>
+                        </label>
+                        <div class="form__input-wrapper">
+                            <input class="form__input input" type="text" name="EMAIL" id="formInput3" value="test@mail.ru" placeholder="Введите данные">
+                        </div>
+                    </div>
+
+                    <div class="form__input-block">
+                        <input class="form__input form__input--checkbox hidden-input" type="checkbox" id="formInputDeca">
+                        <label class="form__input-label form__input-label--checkbox" for="formInputDeca">
+                            По декалитрам
+                        </label>
+                    </div>
+
+                    <div class="form__input-block">
+                        <label class="form__input-label" for="formInput6">
+                            Выберите период времени<span class="form__input-required"> *</span>
+                        </label>
+                        <div class="form__input-wrapper form__input-wrapper--radio" style="display: none;">
+                            <div class="form__radio-wrapper">
+                                <input class="form__input form__input--radio hidden-input" type="radio" name="formInput0" id="formInput0val1">
+                                <label class="form__radio-label" for="formInput0val1">III 2022</label>
+                            </div>
+
+                            <div class="form__radio-wrapper">
+                                <input class="form__input form__input--radio hidden-input" type="radio" name="formInput0" id="formInput0val2">
+                                <label class="form__radio-label" for="formInput0val2">II 2022</label>
+                            </div>
+
+                            <div class="form__radio-wrapper">
+                                <input class="form__input form__input--radio hidden-input" type="radio" name="formInput0" id="formInput0val3">
+                                <label class="form__radio-label" for="formInput0val3">I 2022</label>
+                            </div>
+
+                            <div class="form__radio-wrapper">
+                                <input class="form__input form__input--radio hidden-input" type="radio" name="formInput0" id="formInput0val4">
+                                <label class="form__radio-label" for="formInput0val4">IV 2021</label>
+                            </div>
+                        </div>
+                        <div class="form__input-wrapper">
+                            <select class="form__input form__input--half form__input--select" type="text" name="FROM" id="formInput6" data-placeholder="Начало">
+                                <option></option>
+                                <option value="900">с 9:00</option>
+                                <option value="930">с 9:30</option>
+                                <option value="1000">с 10:00</option>
+                                <option value="1030">с 10:30</option>
+                                <option value="1100">с 11:00</option>
+                                <option value="1130">с 11:30</option>
+                                <option value="1200">с 12:00</option>
+                                <option value="1230">с 12:30</option>
+                            </select>
+
+                            <select class="form__input form__input--half form__input--select" type="text" name="TO" id="formInput7" data-placeholder="Конец">
+                                <option></option>
+                                <option value="1700">до 17:00</option>
+                                <option value="1730">до 17:30</option>
+                                <option value="1800">до 18:00</option>
+                                <option value="1830">до 18:30</option>
+                                <option value="1900">до 19:00</option>
+                                <option value="1930">до 19:30</option>
+                                <option value="2000">до 20:00</option>
+                                <option value="2030">до 20:30</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form__input-block">
+                        <label class="form__input-label" for="formInput9">
+                            Комментарий
+                        </label>
+                        <div class="form__input-wrapper">
+                            <textarea class="form__input form__input--textarea textarea" name="NEW_ADDRESS" id="formInput9" value="" placeholder="Напишите, что нам нужно знать"></textarea>
+                        </div>
+                    </div>
+
+                    <button class="form__submit-btn btn" type="submit">Запросить акт сверки</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <ul class="footer__menu footer-menu">
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--home">Главная</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--catalog" href="#">Каталог</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--fav" href="#">Избранное</a>
+            </li>
+
+            <li class="footer-menu__item">
+                <a class="footer-menu__link footer-menu__link--personal footer-menu__link--active" href="#">Кабинет</a>
+            </li>
+        </ul>
+    </footer>
+
+    <div class="preloader preloader--loading"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

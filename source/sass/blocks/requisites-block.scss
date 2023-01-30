@@ -3,6 +3,14 @@
     background-color: #fff;
     border-radius: $border-radius;
     border: $border;
+
+    &:not(:first-child) {
+        margin-top: 16px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
 }
 
 .requisites-block__items {

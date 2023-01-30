@@ -66,3 +66,9 @@
     align-self: center;
     padding: 0 50px;
 }
+
+.modal__body-content {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}

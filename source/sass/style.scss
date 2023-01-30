@@ -8,6 +8,7 @@
 @import "blocks/section.scss";
 @import "blocks/btn.scss";
 @import "blocks/input.scss";
+@import "blocks/date-input.scss";
 @import "blocks/textarea.scss";
 @import "blocks/document.scss";
 @import "blocks/form.scss";
@@ -40,3 +41,7 @@
 @import "blocks/order-success.scss";
 @import "blocks/auth-reg.scss";
 @import "blocks/cabinet.scss";
+@import "blocks/cabinet-files.scss";
+@import "blocks/cabinet-request-accepted.scss";
+@import "blocks/order-request-detail.scss";
+@import "blocks/orders-requests.scss";

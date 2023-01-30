@@ -95,6 +95,31 @@
 
 .form__input-wrapper {
     @include dflex(nowrap, row, space-between, center);
+
+    &--radio {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+    }
+}
+
+.form__radio-wrapper {
+    &:not(:last-child) {
+        margin-right: 5px;
+    }
+}
+
+.form__radio-label {
+    @include dflex(nowrap, row, center, center);
+    padding: 5px 15px;
+    border: $border;
+    border-radius: 40px;
+    background-color: #fff;
+}
+
+.form__input--radio:checked + .form__radio-label {
+    border-color: $accent-color;
+    background-color: $accent-color;
 }
 
 .form__input {
@@ -271,4 +296,34 @@
         width: 30px;
         height: 30px;
     }
+}
+
+.form__products {
+    margin-top: 16px;
+
+    &:not(:last-of-type) {
+        margin-bottom: 16px;
+    }
+}
+
+.form__product {
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.form__sum {
+    @include dflex(nowrap, row, space-between, center);
+    padding: 11px 15px;
+    border: $border;
+    border-radius: $border-radius;
+    background-color: #fff;
+}
+
+.form__sum-value {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: $total-price-color;
 }

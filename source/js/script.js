@@ -154,9 +154,10 @@ $(function () {
                 if (btn.hasClass('product__corner-btn--fav')) {
                     btn.toggleClass('product__corner-btn--fav-active');
                 } else if (btn.hasClass('product__corner-btn--remove')) {
-                    let product = btn.closest('.product');
+                    // let product = btn.closest('.product');
     
-                    product.remove();
+                    // product.remove();
+                    openModal('removeProduct');
                 }
             });
         });
@@ -388,6 +389,48 @@ $(function () {
             openModal('modalCabinetExit');
         });
     }
+
+    //запрос акта сверки - декалитры (УДАЛИТЬ ПОСЛЕ ПЕРЕНОСА?):
+    let decaCheckbox = $('#formInputDeca');
+
+    if (decaCheckbox.length) {
+        decaCheckbox.on('change', function() {
+            let submitBtn = decaCheckbox.closest('form').find('.form__submit-btn'),
+                radios = decaCheckbox.closest('form').find('.form__input-wrapper--radio');
+            
+            if (decaCheckbox.is(':checked')) {
+                submitBtn.text('Запросить акт сверки (декалитры)');
+                radios.show();
+            } else {
+                submitBtn.text('Запросить акт сверки');
+                radios.hide();
+            }
+        });
+    }
+
+    //модалка фильтрации заказов по датам (УДАЛИТЬ ПОСЛЕ ПЕРЕНОСА):
+    let ordersFilterCallBtn = $('.orders-requests__list-filter-toggle');
+
+    if (ordersFilterCallBtn.length) {
+        ordersFilterCallBtn.on('click', function() {
+            openModal('modalOrdersSort');
+        });
+    }
+
+    //открытие инпутов с датами через клик по лейблу:
+    //TODO: прикрутить datepicker!!!
+    // let dateInputLabels = $('.date-input__label');
+
+    // if (dateInputLabels.length) {
+    //     dateInputLabels.each(function() {
+    //         let label = $(this),
+    //             input = label.prev('input[type="date"]');
+
+    //         label.on('click', function() {
+    //             input.click();
+    //         });
+    //     });
+    // }
 });
 
 $(window).on('load', function() {

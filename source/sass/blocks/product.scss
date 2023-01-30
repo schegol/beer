@@ -297,15 +297,18 @@
 }
 
 .product__controls-total {
-    display: none;
     flex-basis: calc(50% - 6px);
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
     text-align: right;
+
+    &--hidden {
+        display: none;
+    }
 }
 
-.product__controls--active .product__controls-total {
+.product__controls--active .product__controls-total--hidden {
     display: block;
 }
 
@@ -321,4 +324,9 @@
     &:not(:last-child) {
         margin-bottom: 4px;
     }
+}
+
+.product__simple-count {
+    font-size: $label-fz;
+    line-height: $label-lh;
 }

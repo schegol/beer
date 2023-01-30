@@ -1,0 +1,27 @@
+.date-input {
+    position: relative;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.date-input__label {
+    @include dflex(nowrap, row, flex-start, center);
+    position: relative;
+    width: 100%;
+    padding: 15px 56px 15px 20px;
+    color: $neutral-color-medium;
+    background-color: #fff;
+    border: 1px solid #DCDCDC;
+    border-radius: 35px;
+
+    &::after {
+        @include abs-center-y;
+        @include background("../img/icon-date-input.svg");
+        right: 15px;
+        left: auto;
+        width: 26px;
+        height: 26px;
+    }
+}
