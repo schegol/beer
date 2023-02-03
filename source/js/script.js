@@ -106,12 +106,24 @@ let body = $('body'),
     modalOverlay = $('.modal'),
     modals = $('.modal__body');
 
-const openModal = function(id) {
+//ПОСЛЕ ПЕРЕНОСА ПЕРЕДЕЛАТЬ УДАЛЕНИЕ ТОВАРА:
+const openModal = function(id, itemToRemove = false) {
     let targetModal = modalOverlay.children('#'+id);
 
     body.addClass('fixed');
     modalOverlay.addClass('modal--open');
     targetModal.addClass('modal__body--open');
+
+    if (itemToRemove !== false) {
+        let confirmBtn = targetModal.find('.modal__confirm-btn');
+
+        confirmBtn.on('click', function(e) {
+            e.preventDefault();
+
+            itemToRemove.remove();
+            closeModals();
+        });
+    }
 }
 
 const closeModals = function() {
@@ -129,7 +141,7 @@ $(function () {
             let slider = $(this);
 
             slider.slick({
-                touchThreshold: 30,
+                touchThreshold: 5,
                 infinite: false,
                 autoplay: false,
                 slidesToShow: 1,
@@ -154,10 +166,9 @@ $(function () {
                 if (btn.hasClass('product__corner-btn--fav')) {
                     btn.toggleClass('product__corner-btn--fav-active');
                 } else if (btn.hasClass('product__corner-btn--remove')) {
-                    // let product = btn.closest('.product');
-    
-                    // product.remove();
-                    openModal('removeProduct');
+                    let product = btn.closest('.product');
+
+                    openModal('removeProduct', product);
                 }
             });
         });
@@ -208,14 +219,26 @@ $(function () {
         aminationInProgress = false;
 
     if (productsListHeads.length) {
+        let allProducts = productsListHeads.parent().children('.products-list__products');
+
         productsListHeads.each(function() {
             let head = $(this),
-                products = head.next('.products-list__products');
+                products = head.next('.products-list__products'),
+                parentBlock = head.parent(),
+                otherBlocks = parentBlock.siblings(),
+                otherBlocksHeads = otherBlocks.find('.products-list__block-head'),
+                otherBlocksProducts = otherBlocks.find('.products-list__products');
     
             head.on('click', function(e) {
                 e.preventDefault;
+
                 if (!aminationInProgress) {
                     aminationInProgress = true;
+
+                    if (!head.hasClass('products-list__block-head--open')) {
+                        otherBlocksHeads.removeClass('products-list__block-head--open');
+                        otherBlocksProducts.slideUp(300);
+                    }
     
                     head.toggleClass('products-list__block-head--open');
                     products.slideToggle(300);
@@ -431,6 +454,73 @@ $(function () {
     //         });
     //     });
     // }
+
+    //добавление адреса (УБРАТЬ ПОСЛЕ ПЕРЕНОСА?):
+    let addAddressBtn = $('.form__add-btn');
+
+    if (addAddressBtn.length) {
+        addAddressBtn.on('click', function() {
+            let btn = $(this),
+                prevAddressBlock = btn.closest('.form__input-group').prev('.form__input-group'),
+                prevAddressCount = prevAddressBlock.data('address');
+
+            if (prevAddressCount >= 1) {
+                let newAddressCount = prevAddressCount+1,
+                    newAddressHtml = '<div class="form__input-group" data-address="'+newAddressCount+'">\n'+
+                        '<div class="form__input-block">\n'+
+                            '<label class="form__input-label" for="formInput0_'+newAddressCount+'">\n'+
+                                'Адрес №'+newAddressCount+'<span class="form__input-required"> *</span>\n'+
+                            '</label>\n'+
+                            '<div class="form__input-wrapper">\n'+
+                                '<textarea class="form__input form__input--textarea textarea textarea--small" name="ADDRESS_'+newAddressCount+'" id="formInput0_'+newAddressCount+'" placeholder="Введите данные"></textarea>\n'+
+                            '</div>\n'+
+                        '</div>\n'+
+                        '<div class="form__input-block">\n'+
+                            '<label class="form__input-label" for="formInput00_'+newAddressCount+'">\n'+
+                                'Время приёма отгрузок (Адрес №'+newAddressCount+')<span class="form__input-required"> *</span>\n'+
+                            '</label>\n'+
+                            '<div class="form__input-wrapper">\n'+
+                                '<select class="form__input form__input--half form__input--select" type="text" name="FROM_'+newAddressCount+'" id="formInput00_'+newAddressCount+'" data-placeholder="с --:--">\n'+
+                                    '<option></option>\n'+
+                                    '<option value="9">с 9:00</option>\n'+
+                                    '<option value="10">с 10:00</option>\n'+
+                                    '<option value="11">с 11:00</option>\n'+
+                                    '<option value="12">с 12:00</option>\n'+
+                                '</select>\n'+
+                                '<select class="form__input form__input--half form__input--select" type="text" name="TO_'+newAddressCount+'" id="formInput000_'+newAddressCount+'" data-placeholder="до --:--">\n'+
+                                    '<option></option>\n'+
+                                    '<option value="17">до 17:00</option>\n'+
+                                    '<option value="18">до 18:00</option>\n'+
+                                    '<option value="19">до 19:00</option>\n'+
+                                    '<option value="20">до 20:00</option>\n'+
+                                '</select>\n'+
+                            '</div>\n'+
+                        '</div>\n'+
+                    '</div>';
+
+                prevAddressBlock.after(newAddressHtml);
+
+                let formSelects = $('.form__input-group[data-address="'+newAddressCount+'"] .form__input--select');
+
+                if (formSelects.length) {
+                    modifySelect2();
+
+                    formSelects.each(function() {
+                        let select = $(this),
+                            placeholder = select.data('placeholder');
+
+                        select.select2({
+                            'placeholder': placeholder,
+                            'minimumResultsForSearch': -1,
+                            'dropdownPosition': 'below',
+                            'width': '100%',
+                        });
+                    });
+                }
+
+            }
+        });
+    }
 });
 
 $(window).on('load', function() {

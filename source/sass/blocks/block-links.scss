@@ -40,6 +40,10 @@
     height: 100%;
 }
 
+.block-links__link:not(.block-links__link--small) .block-links__link-text {
+	max-width: 50%;
+}
+
 .block-links__link-heading {
     display: block;
     margin-bottom: 4px;

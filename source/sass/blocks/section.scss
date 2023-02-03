@@ -30,3 +30,9 @@
         margin-bottom: 16px;
     }
 }
+
+.section--static h3 {
+    &:not(:last-child) {
+        margin-bottom: 4px;
+    }
+}
