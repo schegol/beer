@@ -23,6 +23,35 @@
         background-color: $neutral-color-light;
         border-radius: 1px;
     }
+
+    &--required,
+    &--non-required {
+        &::before {
+            @include abs-center;
+            position: absolute;
+            width: 100vw;
+            height: calc(100% + 33px);
+            z-index: -1;
+        }
+    }
+
+    &--required {
+        &::before {
+            background-color: $neutral-color-light;
+        }
+    }
+
+    &--non-required {
+        &::before {
+            background-color: #fff;
+        }
+    }
+
+    &--no-border {
+        &::after {
+            display: none;
+        }
+    }
 }
 
 .form__input-block {
@@ -326,4 +355,40 @@
     line-height: 26px;
     text-transform: uppercase;
     color: $total-price-color;
+}
+
+.form__input-group-remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 22px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $neutral-color-dark;
+    background-color: transparent;
+    border: none;
+
+    &::after {
+        @include abs-center-y;
+        @include background("../img/icon-cross-remove-for0m-group.svg");
+        right: 0;
+        left: auto;
+        width: 14px;
+        height: 14px;
+    }
+}
+
+.form__input-group-heading {
+    margin: 0 0 16px;
+    font-size: 18px;
+    line-height: 28px;
+
+    &--required {
+        color: 050931;
+    }
+
+    &--non-required {
+        color: $new-heading-color;
+    }
 }

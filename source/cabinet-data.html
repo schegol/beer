@@ -37,7 +37,7 @@
                     <div class="form__input-group" data-address="1">
                         <div class="form__input-block">
                             <label class="form__input-label" for="formInput1">
-                                Наименование заведения<span class="form__input-required"> *</span>
+                                Наименование точки продажи<span class="form__input-required"> *</span>
                             </label>
                             <div class="form__input-wrapper">
                                 <input class="form__input input" type="text" name="BAR_NAME" id="formInput1" value="" placeholder="Введите название бара/иного заведения">
@@ -45,8 +45,17 @@
                         </div>
 
                         <div class="form__input-block">
+                            <label class="form__input-label" for="formInput11">
+                                ИНН<span class="form__input-required"> *</span>
+                            </label>
+                            <div class="form__input-wrapper">
+                                <input class="form__input input" type="text" name="INN" id="formInput11" value="" placeholder="Введите данные">
+                            </div>
+                        </div>
+
+                        <div class="form__input-block">
                             <label class="form__input-label" for="formInput2">
-                                Фактический адрес<span class="form__input-required"> *</span>
+                                Адрес точки продажи<span class="form__input-required"> *</span>
                             </label>
                             <div class="form__input-wrapper">
                                 <textarea class="form__input form__input--textarea textarea textarea--small" name="ADDRESS" id="formInput2" value="" placeholder="Введите данные"></textarea>
@@ -55,7 +64,7 @@
 
                         <div class="form__input-block">
                             <label class="form__input-label" for="formInput3">
-                                Приём отгрузок<span class="form__input-required"> *</span>
+                                Время приёма отгрузок<span class="form__input-required"> *</span>
                             </label>
                             <div class="form__input-wrapper">
                                 <select class="form__input form__input--half form__input--select" type="text" name="FROM" id="formInput3" data-placeholder="с --:--">
@@ -80,7 +89,7 @@
                     <div class="form__input-group" data-address="2">
                         <div class="form__input-block">
                             <label class="form__input-label" for="formInput0">
-                                Адрес №2<span class="form__input-required"> *</span>
+                                Адрес точки продажи №2<span class="form__input-required"> *</span>
                             </label>
                             <div class="form__input-wrapper">
                                 <textarea class="form__input form__input--textarea textarea textarea--small" name="ADDRESS_2" id="formInput0" placeholder="Введите данные">ленина 62 а</textarea>
@@ -89,7 +98,7 @@
 
                         <div class="form__input-block">
                             <label class="form__input-label" for="formInput00">
-                                Время приёма отгрузок (Адрес №2)<span class="form__input-required"> *</span>
+                                Приём продукции по адресу №2<span class="form__input-required"> *</span>
                             </label>
                             <div class="form__input-wrapper">
                                 <select class="form__input form__input--half form__input--select" type="text" name="FROM_2" id="formInput00" data-placeholder="с --:--">
@@ -109,7 +118,7 @@
                         </div>
                     </div>
 
-                    <div class="form__input-group">
+                    <div class="form__input-group form__input-group--no-border">
                         <button class="form__add-btn form__add-btn--address btn btn--non-target" type="button">Добавить еще адрес</button>
 
                         <div class="form__input-block">
@@ -140,15 +149,6 @@
                         </div>
 
                         <div class="form__input-block">
-                            <label class="form__input-label" for="formInput8">
-                                Наименование юридического лица<span class="form__input-required"> *</span>
-                            </label>
-                            <div class="form__input-wrapper">
-                                <textarea class="form__input form__input--textarea textarea textarea--small" name="COMPANY_NAME" id="formInput8" value="" placeholder="Введите данные"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form__input-block">
                             <label class="form__input-label" for="formInput9">
                                 Придумайте пароль<span class="form__input-required"> *</span>
                             </label>
@@ -167,22 +167,24 @@
                         </div>
                     </div>
 
-                    <div class="form__input-group">
+                    <div class="form__input-group form__input-group--non-required">
+                        <h2 class="form__input-group-heading form__input-group-heading--non-required">Необязательные поля</h2>
+
                         <button class="form__group-toggle form__group-toggle--open btn btn--non-target" type="button">Данные юридического лица</button>
 
                         <div class="form__group-minimized">
                             <div class="form__input-block">
-                                <label class="form__input-label" for="formInput11">
-                                    ИНН<span class="form__input-required"> *</span>
+                                <label class="form__input-label" for="formInput8">
+                                    Наименование юридического лица
                                 </label>
                                 <div class="form__input-wrapper">
-                                    <input class="form__input input" type="text" name="INN" id="formInput11" value="" placeholder="Введите данные">
+                                    <textarea class="form__input form__input--textarea textarea textarea--small" name="COMPANY_NAME" id="formInput8" value="" placeholder="Введите данные"></textarea>
                                 </div>
                             </div>
 
                             <div class="form__input-block">
                                 <label class="form__input-label" for="formInput12">
-                                    Юридический адрес<span class="form__input-required"> *</span>
+                                    Юридический адрес
                                 </label>
                                 <div class="form__input-wrapper">
                                     <textarea class="form__input form__input--textarea textarea textarea--small" name="YUR_ADDRESS" id="formInput12" value="" placeholder="Введите данные"></textarea>
@@ -191,7 +193,7 @@
 
                             <div class="form__input-block">
                                 <label class="form__input-label" for="formInput13">
-                                    КПП<span class="form__input-required"> *</span>
+                                    КПП
                                 </label>
                                 <div class="form__input-wrapper">
                                     <input class="form__input input" type="text" name="KPP" id="formInput13" value="" placeholder="Введите данные">
@@ -200,7 +202,7 @@
                             
                             <div class="form__input-block">
                                 <label class="form__input-label" for="formInput14">
-                                    ОГРН<span class="form__input-required"> *</span>
+                                    ОГРН
                                 </label>
                                 <div class="form__input-wrapper">
                                     <input class="form__input input" type="text" name="OGRN" id="formInput14" value="" placeholder="Введите данные">
@@ -209,7 +211,7 @@
 
                             <div class="form__input-block">
                                 <label class="form__input-label" for="formInput15">
-                                    ОКПО<span class="form__input-required"> *</span>
+                                    ОКПО
                                 </label>
                                 <div class="form__input-wrapper">
                                     <input class="form__input input" type="text" name="OKPO" id="formInput15" value="" placeholder="Введите данные">
@@ -218,7 +220,7 @@
 
                             <div class="form__input-block">
                                 <label class="form__input-label" for="formInput16">
-                                    ID ЕГАИС<span class="form__input-required"> *</span>
+                                    ID ЕГАИС
                                 </label>
                                 <div class="form__input-wrapper">
                                     <input class="form__input input" type="text" name="ID_EGAIS" id="formInput16" value="" placeholder="Введите данные">
@@ -227,13 +229,13 @@
                         </div>
                     </div>
 
-                    <div class="form__input-group">
+                    <div class="form__input-group form__input-group--non-required">
                         <button class="form__group-toggle form__group-toggle--open btn btn--non-target" type="button">Расчетный счет</button>
 
                         <div class="form__group-minimized">
                             <div class="form__input-block">
                                 <label class="form__input-label" for="formInput17">
-                                    БИК<span class="form__input-required"> *</span>
+                                    БИК
                                 </label>
                                 <div class="form__input-wrapper">
                                     <input class="form__input input" type="text" name="BIK" id="formInput17" value="" placeholder="Введите данные">
@@ -242,7 +244,7 @@
                             
                             <div class="form__input-block">
                                 <label class="form__input-label" for="formInput18">
-                                    Банк<span class="form__input-required"> *</span>
+                                    Банк
                                 </label>
                                 <div class="form__input-wrapper">
                                     <input class="form__input input" type="text" name="BANK" id="formInput18" value="" placeholder="Введите данные">
@@ -251,7 +253,7 @@
 
                             <div class="form__input-block">
                                 <label class="form__input-label" for="formInput19">
-                                    К/с<span class="form__input-required"> *</span>
+                                    К/с
                                 </label>
                                 <div class="form__input-wrapper">
                                     <input class="form__input input" type="text" name="KS" id="formInput19" value="" placeholder="Введите данные">
@@ -260,7 +262,7 @@
 
                             <div class="form__input-block">
                                 <label class="form__input-label" for="formInput20">
-                                    Р/с<span class="form__input-required"> *</span>
+                                    Р/с
                                 </label>
                                 <div class="form__input-wrapper">
                                     <input class="form__input input" type="text" name="RS" id="formInput20" value="" placeholder="Введите данные">
@@ -269,7 +271,7 @@
                         </div>
                     </div>
 
-                    <div class="form__input-group">
+                    <div class="form__input-group form__input-group--non-required">
                         <button class="form__group-toggle form__group-toggle--open btn btn--non-target" type="button">Документы</button>
 
                         <div class="form__group-minimized">
@@ -295,16 +297,18 @@
                         </div>
                     </div>
 
-                    <div class="form__input-block">
-                        <label class="form__input-label" for="formInput22">
-                            Комментарий
-                        </label>
-                        <div class="form__input-wrapper">
-                            <textarea class="form__input form__input--textarea textarea" name="COMMENT" id="formInput22" value="" placeholder="Напишите, что нам нужно знать"></textarea>
+                    <div class="form__input-group form__input-group--non-required form__input-group--no-border">
+                        <div class="form__input-block">
+                            <label class="form__input-label" for="formInput22">
+                                Комментарий
+                            </label>
+                            <div class="form__input-wrapper">
+                                <textarea class="form__input form__input--textarea textarea" name="COMMENT" id="formInput22" value="" placeholder="Напишите, что нам нужно знать"></textarea>
+                            </div>
                         </div>
-                    </div>
 
-                    <button class="form__submit-btn btn" type="submit" id="cabinetFormSaveBtn">Сохранить изменения</button>
+                        <button class="form__submit-btn btn" type="submit" id="cabinetFormSaveBtn">Сохранить изменения</button>
+                    </div>
                 </form>                    
             </div>
         </section>

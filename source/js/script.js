@@ -467,9 +467,10 @@ $(function () {
             if (prevAddressCount >= 1) {
                 let newAddressCount = prevAddressCount+1,
                     newAddressHtml = '<div class="form__input-group" data-address="'+newAddressCount+'">\n'+
+                        '<button class="form__input-group-remove" type="button">Удалить</button>\n'+
                         '<div class="form__input-block">\n'+
                             '<label class="form__input-label" for="formInput0_'+newAddressCount+'">\n'+
-                                'Адрес №'+newAddressCount+'<span class="form__input-required"> *</span>\n'+
+                                'Адрес точки продажи №'+newAddressCount+'<span class="form__input-required"> *</span>\n'+
                             '</label>\n'+
                             '<div class="form__input-wrapper">\n'+
                                 '<textarea class="form__input form__input--textarea textarea textarea--small" name="ADDRESS_'+newAddressCount+'" id="formInput0_'+newAddressCount+'" placeholder="Введите данные"></textarea>\n'+
@@ -477,7 +478,7 @@ $(function () {
                         '</div>\n'+
                         '<div class="form__input-block">\n'+
                             '<label class="form__input-label" for="formInput00_'+newAddressCount+'">\n'+
-                                'Время приёма отгрузок (Адрес №'+newAddressCount+')<span class="form__input-required"> *</span>\n'+
+                                'Приём продукции по адресу №'+newAddressCount+'<span class="form__input-required"> *</span>\n'+
                             '</label>\n'+
                             '<div class="form__input-wrapper">\n'+
                                 '<select class="form__input form__input--half form__input--select" type="text" name="FROM_'+newAddressCount+'" id="formInput00_'+newAddressCount+'" data-placeholder="с --:--">\n'+
@@ -521,6 +522,16 @@ $(function () {
             }
         });
     }
+
+    //удаление доп. блока с адресом:
+    body.on('click', '.form__input-group-remove', function(e) {
+        e.preventDefault();
+
+        let btn = $(this),
+            formGroup = btn.closest('.form__input-group');
+
+        formGroup.remove();
+    });
 });
 
 $(window).on('load', function() {
